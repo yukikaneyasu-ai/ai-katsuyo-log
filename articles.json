@@ -9,7 +9,8 @@
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000110/"
+    "url": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000110/",
+    "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2606/19/2000000110/10000556/2048"
   },
   {
     "id": "b87b7d4ca5",
@@ -21,7 +22,8 @@
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://kn.itmedia.co.jp/kn/articles/2606/19/news113.html"
+    "url": "https://kn.itmedia.co.jp/kn/articles/2606/19/news113.html",
+    "image": "https://image.itmedia.co.jp/kn/articles/2606/19/cover_news113.jpg"
   },
   {
     "id": "97b5d5d728",
@@ -33,19 +35,34 @@
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000109/"
+    "url": "https://www.itmedia.co.jp/aiplus/article/2606/19/2000000109/",
+    "image": "https://www.itmedia.co.jp/aiplus/article/ogp/2606/19/2000000109/10000553/2048"
   },
   {
-    "id": "a846fd2e4e",
-    "date": "2026-06-20",
+    "id": "248266a54e",
+    "date": "2026-06-19",
     "category": "AI",
-    "title": "生成AIは「ゲーマーが望んでいない」から使わない―『パルワールド』のポケットペア関係者が海外メディアに考え明かす - Game*Spark",
-    "excerpt": "生成AIは「ゲーマーが望んでいない」から使わない―『パルワールド』のポケットペア関係者が海外メディアに考え明かす Game*Spark",
+    "title": "生成AIで「効率化」7割が回答 削減時間は1日あたり75分（FNNプライムオンライン（フジテレビ系）） - Yahoo!ニュース",
+    "excerpt": "生成AIで「効率化」7割が回答 削減時間は1日あたり75分（FNNプライムオンライン（フジテレビ系）） Yahoo!ニュース",
     "difficulty": 1,
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9Hc3h5VFYyamlFWS1zeWk3Z2IyZVhHYmN5WHJXSk02M3lCMnpMaGx5alEySzh0TU1MMUx2NDExdXI3MHVHUVRxT1pXcUUyZ0doYVVnSm5yekVnU1RLR2g1c2xyQmptZw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAySllnQzhnOXNCMi0weHlKUzhXRU1ZUmFkaUFLVW91U0RLWWlfVENBM2RJbm9CajVvQi13ekFyRjdmRlJIQWV1bmxNWnY2ZjNFZzRhNmpxNmdqTWhkMlBleVhLSThPUEE5bk5LN2J5VERhenQ3ckx4cDQxMFU0d1E?oc=5",
+    "image": ""
+  },
+  {
+    "id": "42faa7d3ed",
+    "date": "2026-06-19",
+    "category": "AI",
+    "title": "生成AIで「効率化」7割が回答 削減時間は1日あたり75分 - au Webポータル",
+    "excerpt": "生成AIで「効率化」7割が回答 削減時間は1日あたり75分 au Webポータル",
+    "difficulty": 1,
+    "profit": 1,
+    "time": "3分で読了",
+    "views": 0,
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4teFhjQjVESFhNVUZESVBtTTYzbVJNT1dzSmFSc1F0ZHg0Rk1yUndtenN6WlhyX1M5YU5sRUpVQksybXlhMXB0RG1NUl9pNHVSMGFiT2IxOWJ4aV9WYVRXeDZnVHFRaFZlYmxvMnRINzc2NHVzZlU3emF0bw?oc=5",
+    "image": ""
   },
   {
     "id": "8033407152",
@@ -57,19 +74,8 @@
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8weDVNRFkwYmc0Rkc2RnpRLWtNalJzaHFZejhtb3VLRVlGek1acmhEbFFZS2dOelZQNnVPZTBXTEUyMF9LZDRzUlQ5a0E3bnVTU1g5UE1sekp2UDM1YnhLSTE0c0IxWUtKbU1SMTI0dHVmaXBuY1lR?oc=5"
-  },
-  {
-    "id": "f790184492",
-    "date": "2026-06-20",
-    "category": "AI",
-    "title": "介護離職防止へ生成ＡＩ活用、アンケート分析し「助言」「支援」適切に…「気兼ねなく働けるように」（読売新聞オンライン） - Yahoo!ニュース",
-    "excerpt": "介護離職防止へ生成ＡＩ活用、アンケート分析し「助言」「支援」適切に…「気兼ねなく働けるように」（読売新聞オンライン） Yahoo!ニュース",
-    "difficulty": 1,
-    "profit": 1,
-    "time": "3分で読了",
-    "views": 0,
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE15ei1YSno4ZjcxVEw1aUtCSF9kanN2bDgtUUJ4eG9WUG5reGZlc29RRWpjNDFBcWd2M0xXODRoVm02UXhLSDdCZU9zZ2tMaEgzYy1FY0lEY2todnBaWjczOVlSQzczMHJjRDRMak5xUzNPMHBZSWt1NHVHZnRwOWc?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8weDVNRFkwYmc0Rkc2RnpRLWtNalJzaHFZejhtb3VLRVlGek1acmhEbFFZS2dOelZQNnVPZTBXTEUyMF9LZDRzUlQ5a0E3bnVTU1g5UE1sekp2UDM1YnhLSTE0c0IxWUtKbU1SMTI0dHVmaXBuY1lR?oc=5",
+    "image": ""
   },
   {
     "id": "d9e25da723",
@@ -81,7 +87,8 @@
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBMLVAyZ0RTYzhaLUVPdDVLdC1mTXdGclVsYXBxc195ZjBkZVkyRVNmOFVIM2dDbkw3TlZSakFQNlotMVlVd1ozbVRsa2oyWVhObEw3aFR2cTBZaVBrRjRlSA?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBMLVAyZ0RTYzhaLUVPdDVLdC1mTXdGclVsYXBxc195ZjBkZVkyRVNmOFVIM2dDbkw3TlZSakFQNlotMVlVd1ozbVRsa2oyWVhObEw3aFR2cTBZaVBrRjRlSA?oc=5",
+    "image": ""
   },
   {
     "id": "184e306e2f",
@@ -93,7 +100,8 @@
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOT1lrb2tqMlUxSWljNFVDNmd0TkFxRmtncXJrTlVOSFROdml6cXVzb1pWLTZ4WmJTb2dERWpQdG8yZ0lCS3ZZeTZwS2oxODJUQ1NadEtEaVFWeXJzejNRMkxIa0E4cm1tVkdsRmlLUHJVRHJUcEFXUmRXVWxBQjNQY2VRY3hzbkE?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOT1lrb2tqMlUxSWljNFVDNmd0TkFxRmtncXJrTlVOSFROdml6cXVzb1pWLTZ4WmJTb2dERWpQdG8yZ0lCS3ZZeTZwS2oxODJUQ1NadEtEaVFWeXJzejNRMkxIa0E4cm1tVkdsRmlLUHJVRHJUcEFXUmRXVWxBQjNQY2VRY3hzbkE?oc=5",
+    "image": ""
   },
   {
     "id": "206409cb8b",
@@ -105,43 +113,47 @@
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBRZzZyTE1nVS12OTVZS3pOeFdwUk12SjY3YzV4WTd2NjA2NmFFaFU2RG83NFFSMnVNUzUxbkMzVWVYXzhxRExJTmNILVQ?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBRZzZyTE1nVS12OTVZS3pOeFdwUk12SjY3YzV4WTd2NjA2NmFFaFU2RG83NFFSMnVNUzUxbkMzVWVYXzhxRExJTmNILVQ?oc=5",
+    "image": ""
   },
   {
-    "id": "da31b0e93a",
+    "id": "e9694e1a80",
     "date": "2026-06-20",
     "category": "整理術",
-    "title": "しっかり運動できて、関節にもやさしい。おウチで気楽に続けられる“ながら”エクササイズ",
-    "excerpt": "“運動しなきゃ”と思いつつ続かない方へ。レッグロッカーボードは理学療法士が設計した自宅用運動器具です。足首に着目した設計で、揺れるだけでストレッチも運動もこなせます。衝撃が少なく関節にやさしいのがメリット。天候に左右されず、家事やテレビの合…",
+    "title": "【実に使いやすい】あのコクヨと共同開発したAnkerのガジェットポーチがいい仕事してる",
+    "excerpt": "Ankerとコクヨが共同開発した「Smart Pouch Supported by KOKUYO」は、ガジェットや文具を効率的に収納できる多機能ポーチ。背面ポケットにはB5ハーフサイズのノートやスマホ、内部には充電器やケーブル類をスッキリ収…",
     "difficulty": 1,
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://www.lifehacker.jp/article/machi-ya-leglockerboard-start-937624/"
+    "url": "https://www.lifehacker.jp/article/2606-amazon-anker-smartpouch-2/",
+    "image": "https://media.loom-app.com/loom/2025/08/28/cadd182c-5e2f-4a98-bfe0-769d6205904f/original.jpg?w=1200&amp;h=630&amp;f=jpg"
   },
   {
-    "id": "3e4e841cf1",
+    "id": "cf76ea8114",
     "date": "2026-06-20",
     "category": "整理術",
-    "title": "古いAndroidスマホ、捨てないで！ Wi-Fi中継機に変えて「電波の死角」をなくす裏ワザ",
-    "excerpt": "家の中にWi-Fiが届きにくい「死角」はありませんか？ 買い替えで使わなくなった古いAndroidスマホがあれば、それをWi-Fi中継機として再利用できるかもしれません。設定方法や注意点、実際の通信速度の検証結果まで詳しく解説します。専用機…",
+    "title": "買い替え前に試してよかった。モンベルの「つけ込み撥水剤」でアウターの撥水効果が蘇った",
+    "excerpt": "モンベルで見つけた「O.D.メンテナンス はっ水剤」は、撥水効果が落ちたアウトドアウェアなどに使えるメンテナンス用品だ。",
     "difficulty": 1,
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://www.lifehacker.jp/article/2606you-can-turn-an-old-android-phone-into-a-wifi-extender/"
+    "url": "https://www.lifehacker.jp/article/2606_businessinsider_montbell-od-maintenance/",
+    "image": "https://media.loom-app.com/loom/2026/06/13/94d9891b-4efc-4871-9bbf-73eb04c140f7/original.png?w=1200&amp;h=630&amp;f=jpg"
   },
   {
-    "id": "65a40221c4",
+    "id": "26e3900d7c",
     "date": "2026-06-20",
     "category": "整理術",
-    "title": "適度な重さでトップレベルの満足度！ こめかみや頭のほぐしが気持ちいいトリプレット",
-    "excerpt": "『triplet（トリプレット）』は、睡眠の質を低下させると言われている眼精疲労に影響する部位のコリをほぐすアルミ製のボディケアツール。使ってみた感想をお届けします。",
+    "title": "サンワの新作は「水辺こそが居場所」スピーカー。3,000円台だしガンガン使って",
+    "excerpt": "暑さの波がジワジワと押し寄せてきました…。水辺に出かける機会が増えるこの時期、ポータブルスピーカーの準備は万端ですか？ 5月26日に発売したサンワサプライのコンパクトBluetoothスピーカー「400-SP126」は、防水力と携帯性がバッ…",
     "difficulty": 1,
     "profit": 1,
     "time": "3分で読了",
     "views": 0,
-    "url": "https://www.lifehacker.jp/article/2606-lht-nagaeplus-triplet/"
+    "url": "https://www.lifehacker.jp/article/amazon-sanwa-bluetoothspeaker400sp126-2606/",
+    "image": "https://media.loom-app.com/loom/2026/05/26/472ed6b7-c2fb-4416-ae1b-bf50af14e326/original.jpg?w=1200&amp;h=630&amp;f=jpg"
   },
   {
     "id": "a1",
@@ -153,7 +165,8 @@
     "profit": 1,
     "time": "3分で読了",
     "views": 980,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "s1",
@@ -165,7 +178,8 @@
     "profit": 2,
     "time": "1日30分〜",
     "views": 1820,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "k1",
@@ -177,7 +191,8 @@
     "profit": 3,
     "time": "週末にまとめて",
     "views": 2150,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "o1",
@@ -189,7 +204,8 @@
     "profit": 1,
     "time": "30分〜",
     "views": 1290,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "s2",
@@ -201,7 +217,8 @@
     "profit": 1,
     "time": "スキマ時間",
     "views": 990,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "a2",
@@ -213,7 +230,8 @@
     "profit": 1,
     "time": "3分で読了",
     "views": 760,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "k2",
@@ -225,7 +243,8 @@
     "profit": 2,
     "time": "環境構築に半日〜",
     "views": 1670,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "a3",
@@ -237,7 +256,8 @@
     "profit": 1,
     "time": "4分で読了",
     "views": 1120,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "o2",
@@ -249,7 +269,8 @@
     "profit": 1,
     "time": "半日〜",
     "views": 860,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "s3",
@@ -261,7 +282,8 @@
     "profit": 2,
     "time": "週末にまとめて",
     "views": 1340,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "a4",
@@ -273,7 +295,8 @@
     "profit": 1,
     "time": "3分で読了",
     "views": 640,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "k3",
@@ -285,7 +308,8 @@
     "profit": 1,
     "time": "10分〜",
     "views": 880,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "s4",
@@ -297,7 +321,8 @@
     "profit": 1,
     "time": "1時間〜",
     "views": 710,
-    "url": "#"
+    "url": "#",
+    "image": ""
   },
   {
     "id": "o3",
@@ -309,6 +334,7 @@
     "profit": 1,
     "time": "20分〜",
     "views": 1010,
-    "url": "#"
+    "url": "#",
+    "image": ""
   }
 ]
