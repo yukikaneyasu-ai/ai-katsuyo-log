@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI活用ログ | AI・副業・株・整理術まとめ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F6F5F0;
+    --surface:#FFFFFF;
+    --ink:#15171B;
+    --mute:#6B6D72;
+    --line:#E1DED4;
+    --signal:#3B5BDB;
+    --signal-dark:#28399E;
+    --amber:#E0822E;
+    --amber-soft:#FBE9D6;
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'JetBrains Mono', monospace;
+    --radius:6px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;}
+  :focus-visible{outline:2px solid var(--signal);outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;} .pulse-dot{animation:none;}}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  .site-header{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50;}
+  .header-top{max-width:1180px;margin:0 auto;padding:18px 24px 14px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .logo{display:flex;align-items:baseline;gap:10px;}
+  .pulse-dot{width:9px;height:9px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(224,130,46,.55);animation:pulse 2.2s infinite;flex-shrink:0;align-self:center;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,130,46,.5);}70%{box-shadow:0 0 0 8px rgba(224,130,46,0);}100%{box-shadow:0 0 0 0 rgba(224,130,46,0);}}
+  .logo-text{font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-.01em;}
+  .logo-sub{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;color:var(--mute);}
+  .search-wrap{flex:1 1 280px;max-width:380px;}
+  .search-wrap input{width:100%;font-family:var(--font-mono);font-size:13px;padding:10px 14px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);color:var(--ink);}
+  .search-wrap input::placeholder{color:#9A9A93;}
+  .search-wrap input:focus{border-color:var(--signal);}
+
+  .category-nav{max-width:1180px;margin:0 auto;padding:0 24px 14px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;}
+  .category-nav::-webkit-scrollbar{display:none;}
+  .cat-pill{flex-shrink:0;font-family:var(--font-mono);font-size:12.5px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mute);white-space:nowrap;}
+  .cat-pill.active{background:var(--ink);border-color:var(--ink);color:var(--surface);}
+  .cat-pill:hover:not(.active){border-color:var(--signal);color:var(--signal);}
+
+  /* Hero (latest entry) */
+  .featured{padding:48px 0 36px;border-bottom:1px solid var(--line);}
+  .featured-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;}
+  .featured-label{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;color:var(--amber);display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+  .featured-label::before{content:"";width:14px;height:1px;background:var(--amber);}
+  .featured h1{font-family:var(--font-display);font-size:clamp(24px,3.2vw,36px);line-height:1.3;margin:0 0 16px;font-weight:700;}
+  .featured p{color:var(--mute);font-size:15px;margin:0 0 18px;max-width:54ch;}
+  .read-link{font-family:var(--font-mono);font-size:13px;color:var(--signal);border-bottom:1px solid var(--signal);padding-bottom:2px;}
+  .read-link:hover{color:var(--signal-dark);border-color:var(--signal-dark);}
+  .signal-art{aspect-ratio:1/1;max-width:300px;margin:0 auto;}
+
+  /* Section headings */
+  .section-block{padding:40px 0;border-bottom:1px solid var(--line);}
+  .section-heading{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:var(--mute);margin:0 0 22px;display:flex;align-items:center;gap:10px;}
+  .section-heading::after{content:"";flex:1;height:1px;background:var(--line);}
+
+  /* Ranking */
+  .ranking-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px;}
+  .ranking-list li{display:flex;align-items:flex-start;gap:16px;}
+  .rank-num{font-family:var(--font-mono);font-weight:700;font-size:20px;color:var(--amber);width:30px;flex-shrink:0;}
+  .rank-body h3{font-family:var(--font-display);font-size:15.5px;margin:0 0 4px;font-weight:600;}
+  .rank-meta{font-family:var(--font-mono);font-size:11px;color:var(--mute);display:flex;gap:10px;}
+
+  /* Layout grid */
+  .content-grid{max-width:1180px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start;}
+
+  /* Article log feed */
+  .feed-rail{position:relative;padding-left:26px;}
+  .feed-rail::before{content:"";position:absolute;left:4px;top:6px;bottom:6px;width:1px;background:var(--line);}
+  .log-entry{position:relative;padding-bottom:30px;}
+  .log-entry::before{content:"";position:absolute;left:-26px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--surface);border:2px solid var(--signal);}
+  .log-meta{font-family:var(--font-mono);font-size:11.5px;color:var(--mute);display:flex;gap:10px;align-items:center;margin-bottom:8px;}
+  .cat-tag{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.04em;color:var(--amber);background:var(--amber-soft);padding:2px 8px;border-radius:3px;}
+  .log-entry h2{font-family:var(--font-display);font-size:18.5px;line-height:1.4;margin:0 0 8px;font-weight:600;}
+  .log-entry h2 a:hover{color:var(--signal);}
+  .log-entry p{color:var(--mute);font-size:14.5px;margin:0 0 10px;max-width:64ch;}
+  .stat-row{display:flex;flex-wrap:wrap;gap:14px;font-family:var(--font-mono);font-size:11.5px;color:var(--mute);margin-bottom:10px;}
+  .stat-row b{color:var(--ink);font-weight:600;}
+  .dots{letter-spacing:1px;}
+  .dots.diff{color:var(--signal);}
+  .dots.profit{color:var(--amber);}
+  .empty-state{font-family:var(--font-mono);font-size:13px;color:var(--mute);padding:30px 0;border-top:1px dashed var(--line);}
+  .inline-ad{margin:4px 0 32px;}
+
+  /* Ads */
+  .ad-box{border:1px dashed var(--line);border-radius:var(--radius);background:#FCFBF8;color:#B3B0A4;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-align:center;display:flex;align-items:center;justify-content:center;min-height:90px;}
+  .ad-box.tall{min-height:250px;}
+  .ad-box.banner{min-height:80px;margin:40px 0;}
+
+  /* Sidebar */
+  .sidebar{display:flex;flex-direction:column;gap:32px;}
+  .sidebar-block h3{font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;color:var(--mute);margin:0 0 14px;}
+  .tag-link-list{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag-link{font-family:var(--font-mono);font-size:12px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:var(--surface);}
+  .tag-link:hover{border-color:var(--signal);color:var(--signal);}
+  .about-block p{font-size:13.5px;color:var(--mute);margin:0;}
+
+  /* Footer */
+  .site-footer{margin-top:24px;border-top:1px solid var(--line);background:var(--surface);}
+  .footer-grid{max-width:1180px;margin:0 auto;padding:48px 24px 32px;display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:48px;}
+  .footer-grid h3{font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;color:var(--mute);margin:0 0 16px;}
+  .footer-grid p{font-size:13.5px;color:var(--mute);margin:0 0 8px;}
+  .footer-cat-list{display:flex;flex-direction:column;gap:8px;}
+  .footer-cat-list a{font-size:13.5px;color:var(--ink);}
+  .footer-cat-list a:hover{color:var(--signal);}
+  .contact-form{display:flex;flex-direction:column;gap:10px;}
+  .contact-form input,.contact-form textarea{font-family:var(--font-body);font-size:13.5px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);color:var(--ink);resize:vertical;}
+  .contact-form textarea{min-height:80px;}
+  .contact-form button{align-self:flex-start;font-family:var(--font-mono);font-size:12.5px;letter-spacing:.04em;padding:10px 20px;border:1px solid var(--ink);background:var(--ink);color:var(--surface);border-radius:var(--radius);}
+  .contact-form button:hover{background:var(--signal);border-color:var(--signal);}
+  .form-note{font-size:11.5px;color:#A8A6A0;margin-top:2px;}
+  .form-success{font-family:var(--font-mono);font-size:13px;color:var(--signal-dark);display:none;}
+  .footer-bottom{border-top:1px solid var(--line);padding:18px 24px;text-align:center;font-family:var(--font-mono);font-size:11px;color:var(--mute);}
+
+  @media (max-width:880px){
+    .content-grid{grid-template-columns:1fr;}
+    .featured-grid{grid-template-columns:1fr;}
+    .signal-art{order:-1;max-width:180px;}
+    .footer-grid{grid-template-columns:1fr;gap:32px;}
+  }
+  @media (max-width:560px){
+    .header-top{padding:14px 18px 12px;gap:12px;}
+    .category-nav{padding:0 18px 12px;}
+    .wrap,.content-grid,.featured,.footer-grid,.section-block .wrap{padding-left:18px;padding-right:18px;}
+    .featured{padding-top:30px;}
+    .featured h1{font-size:22px;}
+    .log-entry h2{font-size:17px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <a class="logo" href="#" aria-label="AI活用ログ トップ">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      <span class="logo-text">AI活用ログ</span>
+      <span class="logo-sub">AI USAGE LOG</span>
+    </a>
+    <div class="search-wrap">
+      <input type="search" id="searchInput" placeholder="記事を検索（例: 副業, 銘柄選定）" aria-label="記事を検索">
+    </div>
+  </div>
+  <nav class="category-nav" id="categoryNav" aria-label="カテゴリ">
+    <button class="cat-pill active" data-cat="all">すべて</button>
+    <button class="cat-pill" data-cat="AI">AI</button>
+    <button class="cat-pill" data-cat="副業">副業</button>
+    <button class="cat-pill" data-cat="株">株</button>
+    <button class="cat-pill" data-cat="整理術">整理術</button>
+  </nav>
+</header>
+
+<main id="mainContent">
+
+  <section class="featured wrap" id="featuredSection" aria-label="最新エントリー">
+    <p class="featured-label">読み込み中…</p>
+  </section>
+
+  <div class="section-block">
+    <div class="wrap">
+      <h2 class="section-heading">人気記事ランキング</h2>
+      <ol class="ranking-list" id="rankingList"></ol>
+    </div>
+  </div>
+
+  <div class="content-grid" style="padding-top:40px;">
+    <section aria-label="記事一覧">
+      <h2 class="section-heading">すべての記事</h2>
+      <div class="feed-rail" id="articleFeed"></div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="ad-box tall" aria-label="広告スペース">広告スペース<br>300×250</div>
+
+      <div class="sidebar-block">
+        <h3>カテゴリ</h3>
+        <div class="tag-link-list" id="tagList">
+          <a href="#" class="tag-link" data-cat="AI">AI</a>
+          <a href="#" class="tag-link" data-cat="副業">副業</a>
+          <a href="#" class="tag-link" data-cat="株">株</a>
+          <a href="#" class="tag-link" data-cat="整理術">整理術</a>
+        </div>
+      </div>
+
+      <div class="ad-box" aria-label="広告スペース">広告スペース<br>300×100</div>
+
+      <div class="sidebar-block about-block">
+        <h3>このサイトについて</h3>
+        <p>AIを使った副業・株式投資・整理術などの実践ノウハウを、毎日少しずつ追加しながらまとめています。</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <div class="ad-box banner" aria-label="広告スペース">広告スペース（バナー）728×90</div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h3>AI活用ログ</h3>
+      <p>AI・副業・株・整理術。AIに関する実践ノウハウを毎日更新しています。</p>
+    </div>
+    <div>
+      <h3>カテゴリ</h3>
+      <div class="footer-cat-list">
+        <a href="#" class="tag-link" data-cat="AI">AI</a>
+        <a href="#" class="tag-link" data-cat="副業">副業</a>
+        <a href="#" class="tag-link" data-cat="株">株</a>
+        <a href="#" class="tag-link" data-cat="整理術">整理術</a>
+      </div>
+    </div>
+    <div>
+      <h3>お問い合わせ</h3>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="お名前" required aria-label="お名前">
+        <input type="email" placeholder="メールアドレス" required aria-label="メールアドレス">
+        <textarea placeholder="お問い合わせ内容" required aria-label="お問い合わせ内容"></textarea>
+        <button type="submit">送信する</button>
+        <p class="form-success" id="formSuccess">送信しました。お問い合わせありがとうございます。</p>
+        <p class="form-note">※サンプルフォームです。実際に送信するには、Googleフォーム等の外部サービスかサーバー連携が必要です。</p>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 AI活用ログ</div>
+</footer>
+
+<script>
+  let allArticles = [];
+  let activeCat = "all";
+  let query = "";
+
+  function dots(n, total){
+    let s = "";
+    for(let i=1;i<=total;i++) s += i<=n ? "●" : "○";
+    return s;
+  }
+  function yen(n, total){
+    let s = "";
+    for(let i=1;i<=total;i++) s += i<=n ? "¥" : "☆";
+    return s;
+  }
+
+  function signalSVG(){
+    return `
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="6" fill="#E0822E"/>
+      <circle cx="100" cy="100" r="34" fill="none" stroke="#3B5BDB" stroke-width="1.2" opacity="0.55"/>
+      <circle cx="100" cy="100" r="64" fill="none" stroke="#3B5BDB" stroke-width="1.2" opacity="0.35"/>
+      <circle cx="100" cy="100" r="94" fill="none" stroke="#3B5BDB" stroke-width="1.2" opacity="0.18"/>
+      <line x1="100" y1="6" x2="100" y2="194" stroke="#E1DED4" stroke-width="1"/>
+      <line x1="6" y1="100" x2="194" y2="100" stroke="#E1DED4" stroke-width="1"/>
+    </svg>`;
+  }
+
+  function statRow(a){
+    return `<div class="stat-row">
+      <span>難易度 <span class="dots diff">${dots(a.difficulty,3)}</span></span>
+      <span>収益性 <span class="dots profit">${yen(a.profit,3)}</span></span>
+      <span>実践時間 <b>${a.time}</b></span>
+    </div>`;
+  }
+
+  function renderFeatured(){
+    const sorted = [...allArticles].sort((a,b)=> b.date.localeCompare(a.date));
+    const f = sorted[0];
+    document.getElementById("featuredSection").innerHTML = `
+      <div class="featured-grid">
+        <div>
+          <div class="featured-label">最新エントリー</div>
+          <h1><a href="${f.url}">${f.title}</a></h1>
+          <p>${f.excerpt}</p>
+          ${statRow(f)}
+          <div class="log-meta" style="margin-bottom:18px;">
+            <span>${f.date}</span>
+            <span class="cat-tag">${f.category}</span>
+          </div>
+          <a class="read-link" href="${f.url}">続きを読む →</a>
+        </div>
+        <div class="signal-art" aria-hidden="true">${signalSVG()}</div>
+      </div>
+    `;
+  }
+
+  function renderRanking(){
+    const top = [...allArticles].sort((a,b)=> b.views - a.views).slice(0,5);
+    const list = document.getElementById("rankingList");
+    list.innerHTML = top.map((a, i)=> `
+      <li>
+        <span class="rank-num">${i+1}</span>
+        <div class="rank-body">
+          <h3><a href="${a.url}">${a.title}</a></h3>
+          <div class="rank-meta"><span class="cat-tag">${a.category}</span><span>${a.views.toLocaleString()} views</span></div>
+        </div>
+      </li>
+    `).join("");
+  }
+
+  function matchesQuery(a){
+    if(!query) return true;
+    const hay = (a.title + a.excerpt + a.category).toLowerCase();
+    return hay.includes(query.toLowerCase());
+  }
+
+  function renderFeed(){
+    const feed = document.getElementById("articleFeed");
+    const filtered = [...allArticles]
+      .filter(a => (activeCat==="all" || a.category===activeCat) && matchesQuery(a))
+      .sort((a,b)=> b.date.localeCompare(a.date));
+
+    if(filtered.length === 0){
+      feed.innerHTML = `<p class="empty-state">該当する記事が見つかりませんでした。検索キーワードを変えるか、別のカテゴリをお試しください。</p>`;
+      return;
+    }
+
+    let html = "";
+    filtered.forEach((a, i) => {
+      html += `
+        <article class="log-entry">
+          <div class="log-meta">
+            <span>${a.date}</span>
+            <span class="cat-tag">${a.category}</span>
+          </div>
+          <h2><a href="${a.url}">${a.title}</a></h2>
+          <p>${a.excerpt}</p>
+          ${statRow(a)}
+          <a class="read-link" href="${a.url}">続きを読む →</a>
+        </article>
+      `;
+      if(i === 3 && filtered.length > 4){
+        html += `<div class="ad-box inline-ad" aria-label="広告スペース">広告スペース</div>`;
+      }
+    });
+    feed.innerHTML = html;
+  }
+
+  function setActiveCat(cat){
+    activeCat = cat;
+    document.querySelectorAll(".cat-pill").forEach(btn=>{
+      btn.classList.toggle("active", btn.dataset.cat === cat);
+    });
+    renderFeed();
+    document.getElementById("articleFeed").closest("section").scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  function initEvents(){
+    document.getElementById("categoryNav").addEventListener("click", e=>{
+      const btn = e.target.closest(".cat-pill");
+      if(!btn) return;
+      setActiveCat(btn.dataset.cat);
+    });
+    document.querySelectorAll(".tag-link").forEach(link=>{
+      link.addEventListener("click", e=>{
+        e.preventDefault();
+        setActiveCat(link.dataset.cat);
+      });
+    });
+    document.getElementById("searchInput").addEventListener("input", e=>{
+      query = e.target.value.trim();
+      renderFeed();
+    });
+    document.getElementById("contactForm").addEventListener("submit", e=>{
+      e.preventDefault();
+      document.getElementById("formSuccess").style.display = "block";
+      e.target.reset();
+    });
+  }
+
+  function showLoadError(){
+    document.getElementById("featuredSection").innerHTML = `
+      <p class="featured-label">読み込みエラー</p>
+      <p style="color:var(--mute);font-size:14px;max-width:60ch;">
+        articles.json を読み込めませんでした。ブラウザで index.html を直接開いた場合、
+        ローカルのJSONファイルはセキュリティ上読み込めないことがあります。
+        同梱の <b>start.bat</b> をダブルクリックして起動してください。
+      </p>`;
+  }
+
+  fetch("./articles.json")
+    .then(res => {
+      if(!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    })
+    .then(data => {
+      allArticles = data;
+      renderFeatured();
+      renderRanking();
+      renderFeed();
+      initEvents();
+    })
+    .catch(() => {
+      showLoadError();
+      initEvents();
+    });
+</script>
+
+</body>
+</html>
